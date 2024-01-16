@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación al Galardonado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4d1e1e;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #843824;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>INVITACIÓN AL GALARDONADO</h1>
+    <form action="generate-pdf.php" method="post">
+        <label for="curp">CURP:</label>
+        <input type="text" id="curp" name="curp" required>
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="premio">Premio Recibido:</label>
+        <input type="text" id="premio" name="premio" required>
+
+        <label for="condicion">Condición Especial:</label>
+        <input type="text" id="condicion" name="condicion">
+
+        <label for="invitado">¿Tiene Invitado?:</label>
+        <select id="invitado" name="invitado">
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="nombresinvitado">Nombres(Invitado):</label>
+        <input type="text" id="nombresinvitado" name="nombresinvitado" required>
+        
+        <label for="apellidosinvitado">Apellidos(Invitado):</label>
+        <input type="text" id="apellidosinvitado" name="apellidosinvitado" required>
+
+        <label for="condicioninvitado">Condición Especial(Invitado):</label>
+        <input type="text" id="condicioninvitado" name="condicioninvitado">
+
+        <button>Generar Invitación</button>
+    </form>
+</div>
+
+<footer>
+    <p>Fecha de Asistencia: [Fecha]</p>
+    <p>Lugar: [Lugar]</p>
+</footer>
+
+</body>
+</html>
