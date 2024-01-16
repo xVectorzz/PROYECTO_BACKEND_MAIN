@@ -1,0 +1,27 @@
+
+body {
+    background-color: #dadada;
+}
+
+.__centered {
+    min-height: 100vh;
+}
+
+
+.__regist-form {
+    width: 50rem; 
+    background-color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .__regist-form {
+        width: 80%; 
+        background-color: white;
+    }
+  }
+
+/** Carrusel **/
+.carousel-item img {
+    opacity: 0.8;
+}
